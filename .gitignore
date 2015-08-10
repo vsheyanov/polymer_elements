@@ -6,6 +6,7 @@ packages
 *.js_
 *.js.deps
 *.sw?
+*.iml
 .idea/
 .pub/
 node_modules
