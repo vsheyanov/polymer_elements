@@ -40,7 +40,7 @@ main() async {
       expect(error, isNotNull);
       expect(error.getComputedStyle().display, equals('none'),
           reason: 'error should be display:none');
-    });
+    }, skip: 'https://github.com/dart-lang/polymer_elements/issues/3');
 
     test('empty required input shows error', () {
       GoldEmailInput input = fixture('basic');
@@ -135,8 +135,8 @@ main() async {
       testEmail('email@domain@domain.com', false);
     });
     test('unicode in address', () {
-      testEmail('?????@domain.com', false);
-    });
+      testEmail('??????@domain.com', false);
+    }, skip: 'https://github.com/dart-lang/polymer_elements/issues/3');
     test('text after address', () {
       testEmail('email@domain.com (Joe Smith)', false);
     });
