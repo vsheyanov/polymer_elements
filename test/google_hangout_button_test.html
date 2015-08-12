@@ -12,23 +12,23 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
-  <title>iron-selector activate event</title>
+  <title>google-hangout-button</title>
 
   <script src="packages/web_components/webcomponents-lite.js"></script>
-  <link rel="x-dart-test" href="iron_selector_activate_event_test.dart">
-  <!--<script type="application/dart" src="iron_selector_activate_event_test.dart"></script>-->
+  <link rel="x-dart-test" href="google_hangout_button_test.dart">
+  <!--<script type="application/dart" src="google_hangout_button_test.dart"></script>-->
   <!--<script src="packages/browser/dart.js"></script>-->
   <script src="packages/test/dart.js"></script>
 </head>
 <body>
-  <template id="test">
-    <iron-selector id="selector" selected="0">
-      <div>Item 0</div>
-      <div>Item 1</div>
-      <div>Item 2</div>
-      <div>Item 3</div>
-      <div>Item 4</div>
-    </iron-selector>
+  <template id="basic">
+    <google-hangout-button
+        type="party"
+        apps='[{"app_id": "184219133185", "start_data": "dQw4w9WgXcQ", "app_type": "ROOM_APP" }]'
+        topic="test topic"
+        invites='[{ "id": "foo@example.com", "invite_type": "EMAIL" }]'
+        width="72">
+    </google-hangout-button>
   </template>
 </body>
 </html>

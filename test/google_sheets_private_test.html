@@ -12,23 +12,26 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
-  <title>iron-selector activate event</title>
+  <title>google-sheets private</title>
 
   <script src="packages/web_components/webcomponents-lite.js"></script>
-  <link rel="x-dart-test" href="iron_selector_activate_event_test.dart">
-  <!--<script type="application/dart" src="iron_selector_activate_event_test.dart"></script>-->
+  <link rel="x-dart-test" href="google_sheets_private_test.dart">
+  <!--<script type="application/dart" src="google_sheets_private_test.dart"></script>-->
   <!--<script src="packages/browser/dart.js"></script>-->
   <script src="packages/test/dart.js"></script>
 </head>
 <body>
-  <template id="test">
-    <iron-selector id="selector" selected="0">
-      <div>Item 0</div>
-      <div>Item 1</div>
-      <div>Item 2</div>
-      <div>Item 3</div>
-      <div>Item 4</div>
-    </iron-selector>
-  </template>
+  <div>
+    <p>Tests live private spreadsheet data.</p>
+    <p>This test needs to be run manually, standalone in order to fetch an OAuth token.</p>
+
+    <b>NOTES:</b><br>
+    <li>run manually off of localhost:3000/google-sheets/tests/private.html. Can also run from port 8080.</li>
+    <li>use the account: webcomponents.test@gmail.com</li>
+  </div>
+
+  <google-sheets id="sheet" gid="1"
+                 client-id="750497606405-1hq66meqmr4dp09dn54j9ggv85vbv0gp.apps.googleusercontent.com"
+                 key="0AjqzxJ5RoRrWdGh2S0RRYURXTlNHdm9pQlFuM1ZwZWc"></google-sheets>
 </body>
 </html>
